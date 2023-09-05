@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#fff",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .bglg {
+          background-color: #1271a8;
+        }
+
+        .bgmd {
+          background-color: #109e8b;
+        }
+
+        .bgsm {
+          background-color: #a10e58;
+        }
+
+        .test {
+          margin: 0 auto;
+          padding: 20px;
+          font-size: 24px;
+          font-weight: 700;
+          color: #f7f719;
+          background-color: #493ee6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="lg:bglg md:bgmd sm:bgsm max-[639px]:bglg">
+        <h1
+          class="text-center text-pink-600 py-12 font-bold text-2xl max-[639px]:text-white"
+        >
+          Hello world!
+        </h1>
+        <p class="text-center p-5 text-clifford">Tailwind CSS</p>
+      </div>
+    </div>
+    <div class="container mx-auto p-3 m-6 text-xl">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem,
+      aspernatur debitis! Blanditiis aliquid, fugit libero id natus consectetur
+      earum ab culpa ut dicta animi eos, odit ratione voluptatum eius possimus.
+    </div>
+    <ul
+      class="container columns-5 mx-auto mb-4 max-[639px]:px-5 max-[639px]:columns-1"
+    >
+      <li class="border border-black p-2 text-center">1</li>
+      <li class="border border-black p-2 text-center">2</li>
+      <li class="border border-black p-2 text-center">3</li>
+      <li class="border border-black p-2 text-center">4</li>
+      <li class="border border-black p-2 text-center">5</li>
+    </ul>
+    <div class="container mx-auto flex max-[639px]:block">
+      <span
+        class="block mx-5 w-4/12 text-left border border-black max-[639px]:w-auto max-[639px]:text-left max-[639px]:p-4 max-[639px]:mb-4"
+        >span 태그 display: block; 만들기</span
+      >
+      <span
+        class="block mx-5 w-4/12 text-center border border-black max-[639px]:w-auto max-[639px]:text-left max-[639px]:p-4 max-[639px]:mb-4"
+        >span 태그 display: block; 만들기</span
+      >
+      <span
+        class="block mx-5 w-4/12 text-right border border-black max-[639px]:w-auto max-[639px]:text-left max-[639px]:p-4 max-[639px]:mb-4"
+        >span 태그 display: block; 만들기</span
+      >
+    </div>
+    <div
+      class="container mx-auto p-5 mt-10 text-base font-bold text-center text-pink-600 hover:text-cyan-100 bg-cyan-100 hover:bg-pink-600 border border-black"
+    >
+      hover
+    </div>
+    <div class="container mx-auto pt-10">
+      <div class="test text-center">test</div>
+    </div>
+    <div class="container mx-auto">
+      <ul>
+        <li class="flex mb-12 max-[639px]:block">
+          <img
+            src="./bird_logo.jpg"
+            class="w-40 max-[639px]:mx-auto"
+            alt="bird logo"
+          />
+          <p class="p-10 max-[1279px]:p-5 max-[767px]:p-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+            tenetur dolores doloribus temporibus nesciunt doloremque dolor
+            tempore fuga laborum ullam, laudantium nulla voluptas fugiat
+            officiis unde aliquam provident vel omnis!
+          </p>
+        </li>
+        <li class="flex mb-12 max-[639px]:block">
+          <img
+            src="./mountain_image.jpg"
+            class="w-40 max-[639px]:mx-auto"
+            alt="mountain"
+          />
+          <p class="p-10 max-[1279px]:p-5 max-[767px]:p-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+            tenetur dolores doloribus temporibus nesciunt doloremque dolor
+            tempore fuga laborum ullam, laudantium nulla voluptas fugiat
+            officiis unde aliquam provident vel omnis!
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
